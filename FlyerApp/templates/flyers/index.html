@@ -1,0 +1,9 @@
+{% if latest_flyer_list %}    
+    <ul>
+    {% for flyer in latest_flyer_list %}
+        <li><a href="/flyers/{{ flyer.id }}/">{{ flyer.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No flyers are available.</p>
+{% endif %}
